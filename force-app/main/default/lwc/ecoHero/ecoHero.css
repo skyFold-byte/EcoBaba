@@ -1,0 +1,116 @@
+.hero {
+    position: relative;
+    padding: 120px 40px;
+    overflow: hidden;
+    border-radius: 20px;
+    background: linear-gradient(-45deg, #1B5E20, #2E7D32, #43A047, #2E7D32);
+    background-size: 400% 400%;
+    animation: gradientMove 12s ease infinite;
+    color: white;
+}
+ 
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+ 
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    gap: 40px;
+}
+ 
+.left h1 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+ 
+.left h2 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+ 
+.left p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+ 
+.glass-card {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    text-align: center;
+    min-width: 250px;
+}
+ 
+.stat {
+    margin-bottom: 20px;
+}
+ 
+.stat h3 {
+    font-size: 28px;
+    font-weight: 700;
+}
+ 
+.stat span {
+    font-size: 14px;
+    opacity: 0.9;
+}
+ 
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 1s ease forwards;
+}
+ 
+.delay {
+    animation-delay: 0.6s;
+}
+ 
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+ 
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    animation: float 8s ease-in-out infinite alternate;
+}
+ 
+.one {
+    width: 300px;
+    height: 300px;
+    top: -100px;
+    right: -100px;
+}
+ 
+.two {
+    width: 200px;
+    height: 200px;
+    bottom: -80px;
+    left: -80px;
+}
+ 
+@keyframes float {
+    from { transform: translateY(0px); }
+    to { transform: translateY(40px); }
+}
+ 
+@media (max-width: 900px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}

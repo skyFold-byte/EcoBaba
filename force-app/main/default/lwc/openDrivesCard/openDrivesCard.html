@@ -1,0 +1,47 @@
+<template>
+    <lightning-layout multiple-rows="true" horizontal-align="spread">
+ 
+        <template for:each={drives} for:item="drive">
+ 
+            <lightning-layout-item
+                key={drive.id}
+                size="12"
+                medium-device-size="6"
+                large-device-size="4"
+                padding="around-small">
+ 
+                <lightning-card title={drive.name} icon-name="standard:event">
+ 
+                    <div class="slds-p-around_medium">
+ 
+                        <p>📍 {drive.venue}</p>
+                        <p>📅 {drive.date}</p>
+                        <p>⏰ {drive.time}</p>
+ 
+                        <div class="slds-m-top_small">
+                            <p>👥 {drive.joined} Joined</p>
+                            <p class={drive.spotsClass}>
+                                🔥 {drive.spotsLeft} Spots Left
+                            </p>
+                        </div>
+ 
+                        <div class="slds-m-top_medium">
+                            <lightning-button
+                                label="Register Now"
+                                variant="brand"
+                                data-id={drive.id}
+                                onclick={handleRegister}
+                                disabled={drive.isFull}>
+                            </lightning-button>
+                        </div>
+ 
+                    </div>
+ 
+                </lightning-card>
+ 
+            </lightning-layout-item>
+ 
+        </template>
+ 
+    </lightning-layout>
+</template>

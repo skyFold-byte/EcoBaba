@@ -1,0 +1,65 @@
+<template>
+ 
+    <!-- Light Background Wrapper -->
+    <div class="slds-p-vertical_x-large slds-theme_default">
+ 
+        <div class="slds-container_medium">
+ 
+            <div class="slds-text-align_center slds-m-bottom_large">
+                <h2 class="slds-text-heading_medium">
+                    🌍 Eco Impact Dashboard
+                </h2>
+                <p class="slds-text-body_small">
+                    See how our community is making a difference.
+                </p>
+            </div>
+ 
+            <div class="slds-grid slds-wrap slds-gutters slds-text-align_center">
+ 
+                <!-- Total Drives -->
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-4 slds-m-bottom_medium">
+                    <div class="slds-box slds-theme_success slds-p-around_medium">
+                        <div class="slds-text-heading_large">
+                            🌳 {stats.totalDrives}
+                        </div>
+                        <div>Total Drives</div>
+                    </div>
+                </div>
+ 
+                <!-- Active Drives -->
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-4 slds-m-bottom_medium">
+                    <div class="slds-box slds-theme_warning slds-p-around_medium">
+                        <div class="slds-text-heading_large">
+                            🔥 {stats.activeDrives}
+                        </div>
+                        <div>Active Drives</div>
+                    </div>
+                </div>
+ 
+                <!-- Volunteers -->
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-4 slds-m-bottom_medium">
+                    <div class="slds-box slds-theme_info slds-p-around_medium">
+                        <div class="slds-text-heading_large">
+                            👥 {stats.totalVolunteers}
+                        </div>
+                        <div>Volunteers</div>
+                    </div>
+                </div>
+ 
+                <!-- Participations -->
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-4 slds-m-bottom_medium">
+                    <div class="slds-box slds-p-around_medium">
+                        <div class="slds-text-heading_large">
+                            🏆 {stats.totalParticipations}
+                        </div>
+                        <div>Total Participations</div>
+                    </div>
+                </div>
+ 
+            </div>
+ 
+        </div>
+ 
+    </div>
+ 
+</template>

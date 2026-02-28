@@ -1,0 +1,49 @@
+<template>
+    <section class="hero">
+ 
+        <div class="hero-container">
+ 
+            <!-- LEFT SIDE -->
+            <div class="left fade-in">
+                <h1>Empower Change with EcoConnect 🌱</h1>
+                <p>
+                    Join environmental drives, volunteer for a cleaner future,
+                    and track your real-world impact — all in one platform.
+                </p>
+ 
+                <lightning-button
+                    label="Explore Drives"
+                    variant="brand"
+                    onclick={navigateToDrives}>
+                </lightning-button>
+            </div>
+ 
+            <!-- RIGHT SIDE COUNTER CARD -->
+            <div class="right fade-in delay">
+                <div class="glass-card">
+ 
+                    <div class="stat">
+                        <h3>{trees}</h3>
+                        <span>🌳 Trees Planted</span>
+                    </div>
+ 
+                    <div class="stat">
+                        <h3>{volunteers}</h3>
+                        <span>👥 Volunteers</span>
+                    </div>
+ 
+                    <div class="stat">
+                        <h3>{drives}</h3>
+                        <span>♻️ Drives Completed</span>
+                    </div>
+ 
+                </div>
+            </div>
+ 
+        </div>
+ 
+        <div class="circle one"></div>
+        <div class="circle two"></div>
+ 
+    </section>
+</template>

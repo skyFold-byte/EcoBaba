@@ -1,0 +1,28 @@
+.leaderboard-row {
+    background: #f3f6fb;
+    padding: 12px;
+    border-radius: 10px;
+    align-items: center;
+}
+ 
+.rank {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2e844a;
+    width: 40px;
+}
+ 
+.name {
+    font-weight: 600;
+    font-size: 15px;
+}
+ 
+.location {
+    font-size: 12px;
+    color: #6b6d70;
+}
+ 
+.points {
+    font-weight: bold;
+    color: #0176d3;
+}

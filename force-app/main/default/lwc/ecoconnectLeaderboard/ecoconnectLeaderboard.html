@@ -1,0 +1,38 @@
+<template>
+    <lightning-card title="🏆 Top Volunteers Leaderboard">
+        
+        <div class="slds-p-around_medium">
+            
+            <template if:true={volunteers}>
+                <template for:each={volunteers} for:item="vol" for:index="index">
+                    
+                    <div key={vol.Id} class="leaderboard-row slds-grid slds-m-bottom_small">
+                        
+                        <div class="rank">
+                            #{vol.rank}
+                        </div>
+ 
+                        <div class="details slds-col">
+                            <div class="name">{vol.Name}</div>
+                            <div class="location">
+                                {vol.City__c}, {vol.State__c}
+                            </div>
+                        </div>
+ 
+                        <div class="points">
+                            {vol.Points__c} pts
+                        </div>
+ 
+                    </div>
+ 
+                </template>
+            </template>
+ 
+            <template if:false={volunteers}>
+                <p>No volunteers found.</p>
+            </template>
+ 
+        </div>
+ 
+    </lightning-card>
+</template>

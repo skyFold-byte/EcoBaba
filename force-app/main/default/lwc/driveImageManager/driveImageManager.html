@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Drive Image">
+ 
+        <template if:true={imageUrl}>
+            <div class="image-wrapper">
+                <img src={imageUrl} class="drive-image"/>
+            </div>
+        </template>
+ 
+        <template if:false={imageUrl}>
+            <lightning-file-upload
+                label="Upload Drive Image"
+                record-id={recordId}
+                accept=".jpg,.jpeg,.png"
+                onuploadfinished={handleUploadFinished}>
+            </lightning-file-upload>
+        </template>
+ 
+    </lightning-card>
+</template>
