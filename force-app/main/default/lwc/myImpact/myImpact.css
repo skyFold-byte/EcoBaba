@@ -1,0 +1,127 @@
+.impact-container {
+ 
+    background: linear-gradient(135deg, #e6f4ea, #f0f9ff);
+ 
+    border-radius: 20px;
+ 
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+ 
+    text-align: center;
+}
+ 
+.title {
+ 
+    font-size: 26px;
+ 
+    font-weight: 700;
+ 
+    color: #2e844a;
+ 
+    margin-bottom: 25px;
+}
+ 
+.metrics {
+ 
+    display: flex;
+ 
+    justify-content: space-around;
+ 
+    flex-wrap: wrap;
+ 
+    margin-top: 20px;
+}
+ 
+.metric-box {
+ 
+    background: white;
+ 
+    padding: 25px;
+ 
+    border-radius: 15px;
+ 
+    width: 170px;
+ 
+    margin: 10px;
+ 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+ 
+.number {
+ 
+    font-size: 30px;
+ 
+    font-weight: bold;
+ 
+    color: #1589ee;
+}
+ 
+.label {
+ 
+    font-size: 14px;
+ 
+    color: #444;
+}
+ 
+.progress-section {
+ 
+    margin-top: 30px;
+}
+ 
+.progress-bar {
+ 
+    height: 12px;
+ 
+    background: #ddd;
+ 
+    border-radius: 10px;
+}
+ 
+.progress-fill {
+ 
+    height: 12px;
+ 
+    background: #2e844a;
+ 
+    border-radius: 10px;
+ 
+    transition: width 0.6s ease;
+}
+ 
+.progress-text {
+ 
+    margin-top: 8px;
+ 
+    font-size: 14px;
+ 
+    color: #555;
+}
+ 
+.badge-section {
+ 
+    margin-top: 30px;
+}
+ 
+.badge-img {
+ 
+    width: 90px;
+}
+ 
+.badge-title {
+ 
+    margin-top: 10px;
+ 
+    font-weight: 600;
+ 
+    color: #b85c00;
+}
+ 
+.certificate-button {
+ 
+    margin-top: 20px;
+}
+.impact-message {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #2e844a;
+    font-weight: 500;
+}

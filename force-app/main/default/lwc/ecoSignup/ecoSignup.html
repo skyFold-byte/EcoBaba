@@ -1,0 +1,53 @@
+<template>
+    <div class="split-screen">
+        <div class="left-pane">
+            <div class="overlay">
+                <h1>Eco Baba</h1>
+                <p>Nurturing the planet, one record at a time.</p>
+            </div>
+        </div>
+
+        <div class="right-pane">
+            <div class="form-card">
+                <h2>{formTitle}</h2>
+                <template lwc:if={errorMessage}>
+                    <div class="error-msg">{errorMessage}</div>
+                </template>
+
+                <div class="inputs">
+                    <template lwc:if={isRegistering}>
+                        <lightning-input label="First Name" name="fName" onchange={handleInput} required></lightning-input>
+                        <lightning-input label="Last Name" name="lName" onchange={handleInput} required></lightning-input>
+                    </template>
+                    
+                    <lightning-input label="Email" name="email" onchange={handleInput} type="email" required></lightning-input>
+                    
+                    <div class="password-container">
+                        <lightning-input 
+                            label="Password" 
+                            type={passwordType} 
+                            name="password" 
+                            onchange={handleInput} 
+                            required>
+                        </lightning-input>
+                        <lightning-button-icon 
+                            icon-name={passwordIcon} 
+                            alternative-text="Toggle Password Visibility" 
+                            onclick={togglePasswordVisibility}
+                            class="password-toggle">
+                        </lightning-button-icon>
+                    </div>
+                </div>
+
+                <button class="action-btn" onclick={handleSubmit} disabled={isLoading}>
+                    <template lwc:if={isLoading}>
+                        <div class="spinner-small"></div> Processing...
+                    </template>
+                    <template lwc:else>{buttonLabel}</template>
+                </button>
+
+                <p class="toggle-link" onclick={toggleForm}>{toggleText}</p>
+            </div>
+        </div>
+    </div>
+</template>

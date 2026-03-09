@@ -1,0 +1,15 @@
+<template>
+    <div class="eco-wrapper">
+        <div class="eco-header">
+            <h2 class="eco-title">{headerTitle}</h2>
+            <p class="eco-subtitle">Join our mission to build a greener, more resilient future for everyone.</p>
+        </div>
+        
+        <div class="eco-body">
+            <lightning-flow 
+                flow-api-name="EcoConnect_Volunteer_Registration_Flow" 
+                onstatuschange={handleStatusChange}>
+            </lightning-flow>
+        </div>
+    </div>
+</template>

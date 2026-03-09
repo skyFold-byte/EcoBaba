@@ -1,116 +1,62 @@
-.hero {
-    position: relative;
-    padding: 120px 40px;
-    overflow: hidden;
-    border-radius: 20px;
-    background: linear-gradient(-45deg, #1B5E20, #2E7D32, #43A047, #2E7D32);
-    background-size: 400% 400%;
-    animation: gradientMove 12s ease infinite;
-    color: white;
-}
- 
-@keyframes gradientMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
- 
+/* Container */
 .hero-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    --primary-green: #064e3b;
+    --brand-accent: #2e7d32;
+    --text-muted: #475569;
+    --bg-white: #ffffff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     max-width: 1200px;
-    margin: auto;
-    gap: 40px;
+    margin: 40px auto;
+    background: var(--bg-white);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px -10px rgba(0, 0, 0, 0.1);
 }
- 
-.left h1 {
-    font-size: 26px;
-    margin-bottom: 10px;
+
+.hero-content { padding: 80px; display: flex; flex-direction: column; justify-content: center; }
+
+/* Splash Side: Grid Layout to match screenshot */
+.hero-splash {
+    background-image: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2000');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
 }
- 
-.left h2 {
-    font-size: 42px;
-    font-weight: 700;
-    margin-bottom: 20px;
+
+/* This grid creates the layout: 2 up, 1 full width below */
+.stats-grid { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px; 
+    width: 100%; 
+    max-width: 500px;
 }
- 
-.left p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 30px;
-}
- 
-.glass-card {
-    background: rgba(255, 255, 255, 0.15);
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.95);
     padding: 30px;
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    border-radius: 16px;
     text-align: center;
-    min-width: 250px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
- 
-.stat {
-    margin-bottom: 20px;
-}
- 
-.stat h3 {
-    font-size: 28px;
-    font-weight: 700;
-}
- 
-.stat span {
-    font-size: 14px;
-    opacity: 0.9;
-}
- 
-.fade-in {
-    opacity: 0;
-    transform: translateY(40px);
-    animation: fadeUp 1s ease forwards;
-}
- 
-.delay {
-    animation-delay: 0.6s;
-}
- 
-@keyframes fadeUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
- 
-.circle {
-    position: absolute;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.08);
-    animation: float 8s ease-in-out infinite alternate;
-}
- 
-.one {
-    width: 300px;
-    height: 300px;
-    top: -100px;
-    right: -100px;
-}
- 
-.two {
-    width: 200px;
-    height: 200px;
-    bottom: -80px;
-    left: -80px;
-}
- 
-@keyframes float {
-    from { transform: translateY(0px); }
-    to { transform: translateY(40px); }
-}
- 
+
+.stat-card:hover { transform: translateY(-5px); }
+.stat-card h3 { font-size: 1.8rem; color: var(--primary-green); margin: 0; font-weight: 700; }
+.stat-card p { color: var(--text-muted); font-size: 0.9rem; margin-top: 5px; }
+
+/* Typography and Pill */
+.welcome-pill { display: inline-block; background: #f0fdf4; padding: 6px 16px; border-radius: 20px; color: var(--brand-accent); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 20px; width: fit-content; }
+.hero-title { font-size: 3.5rem; font-weight: 800; color: var(--primary-green); line-height: 1.1; margin-bottom: 20px; }
+.hero-description { font-size: 1.2rem; color: var(--text-muted); margin-bottom: 30px; line-height: 1.6; }
+
+/* Mobile */
 @media (max-width: 900px) {
-    .hero-container {
-        flex-direction: column;
-        text-align: center;
-    }
+    .hero-container { grid-template-columns: 1fr; }
+    .hero-content { padding: 40px 20px; text-align: center; align-items: center; }
 }

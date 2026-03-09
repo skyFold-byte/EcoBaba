@@ -1,0 +1,15 @@
+:host {
+    display: block;
+    background: #fff;
+}
+
+/* Adds consistent spacing between search inputs */
+lightning-input {
+    margin-bottom: 0.75rem;
+}
+
+/* Optional: Make the card look more integrated in the sidebar */
+.slds-card {
+    border: 1px solid #dddbda;
+    border-radius: 0.25rem;
+}

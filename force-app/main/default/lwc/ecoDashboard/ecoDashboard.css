@@ -1,0 +1,45 @@
+:host {
+    --eco-green: #2d5a27;
+    --eco-nude: #fdfaf5;
+    --eco-soft-shadow: 0 10px 30px rgba(45, 90, 39, 0.08);
+}
+
+.dashboard-wrapper {
+    background: var(--eco-nude);
+    padding: 3rem 1rem;
+}
+
+.impact-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: var(--eco-soft-shadow);
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: 1px solid #efeae3;
+}
+
+.impact-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--eco-green);
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.header-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--eco-green);
+}

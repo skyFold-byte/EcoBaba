@@ -1,0 +1,48 @@
+/* Container Shadow & Rounding */
+.brand-container {
+    --slds-c-card-color-border: #eef2f6;
+    --slds-c-card-radius-border: 12px;
+    box-shadow: 0 8px 24px rgba(27, 46, 94, 0.12);
+    margin: 1rem;
+}
+
+/* Customizing the Datatable Header */
+.datatable-wrapper {
+    border: 1px solid #eef2f6;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Header Branding - Deep Blue */
+:host {
+    --lwc-headerColorBackground: #1b2e5e;
+    --lwc-headerColorText: #ffffff;
+}
+
+/* Bold ID Links */
+.font-weight-bold {
+    font-weight: 700;
+    color: #0176d3;
+}
+
+/* Status Colors */
+.status-green {
+    color: #2e844a;
+    font-weight: bold;
+    background: #e6ffed;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.status-grey {
+    color: #747474;
+    font-style: italic;
+}
+
+/* Badge Branding */
+.badge-brand {
+    background-color: #1b2e5e;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+}

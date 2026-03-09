@@ -1,0 +1,18 @@
+:host {
+    display: block;
+}
+
+/* Highlights the record view container */
+.detail-container {
+    padding: 1rem;
+    background-color: #fafaf9;
+    border-radius: 4px;
+    min-height: 100px;
+}
+
+/* Styling for the "Select a drive" placeholder message */
+.empty-state {
+    text-align: center;
+    color: #747474;
+    padding: 2rem 0;
+}

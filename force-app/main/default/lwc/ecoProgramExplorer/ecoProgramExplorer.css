@@ -1,0 +1,22 @@
+.explorer-container {
+    background: #f4f6f9;
+    border-radius: 0 0 16px 16px;
+}
+
+.drive-row {
+    background: #ffffff;
+    border-radius: 12px; /* Professional rounded edges */
+    border: 1px solid #e2e8f0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.drive-row:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.custom-button {
+    --slds-c-button-brand-color-background: #2e844a; /* Eco Green */
+    --slds-c-button-brand-spacing-inline-start: 1.5rem;
+    --slds-c-button-brand-spacing-inline-end: 1.5rem;
+}

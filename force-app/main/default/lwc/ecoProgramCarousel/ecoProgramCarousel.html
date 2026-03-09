@@ -1,0 +1,32 @@
+<template>
+    <lightning-card class="eco-carousel-card">
+        <div class="slds-grid slds-grid_align-spread header-row">
+            <h2 class="slds-text-heading_small"><strong>Our Eco Programs</strong></h2>
+            <div class="slds-size_1-of-2">
+                <lightning-combobox 
+                    value={status} 
+                    options={options} 
+                    onchange={handleStatusChange}
+                    variant="label-hidden"
+                    placeholder="Select Status">
+                </lightning-combobox>
+            </div>
+        </div>
+
+        <div class="carousel-container">
+            <template if:true={hasPrograms}>
+                <lightning-carousel class="carousel-img-custom">
+                    <template for:each={programs.data} for:item="prog">
+                        <lightning-carousel-image 
+                            key={prog.Id} 
+                            src={prog.Program_Image_URL__c} 
+                            header={prog.Name} 
+                            onclick={handleNavigate} 
+                            data-id={prog.Id}>
+                        </lightning-carousel-image>
+                    </template>
+                </lightning-carousel>
+            </template>
+        </div>
+    </lightning-card>
+</template>

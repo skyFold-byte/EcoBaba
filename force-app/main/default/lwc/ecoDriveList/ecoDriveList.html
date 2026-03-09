@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Drive Results" icon-name="standard:postcode">
+        <div class="slds-p-horizontal_small">
+            <template if:true={hasResults}>
+                <template for:each={drives.data} for:item="drive">
+                    <div key={drive.Id} onclick={handleSelect} data-id={drive.Id} 
+                         class="slds-box slds-m-bottom_small drive-card">
+                        <p class="slds-text-heading_small">{drive.Name}</p>
+                        <p class="slds-text-color_weak">{drive.City__c}, {drive.State__c}</p>
+                    </div>
+                </template>
+            </template>
+            
+            <template if:false={hasResults}>
+                <p class="slds-p-around_medium">No drives found for this program.</p>
+            </template>
+        </div>
+        <lightning-spinner if:true={drives.isLoading} variant="brand" size="small"></lightning-spinner>
+    </lightning-card>
+</template>

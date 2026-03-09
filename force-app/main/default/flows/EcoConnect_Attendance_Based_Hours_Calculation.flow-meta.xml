@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>66.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>Check_Attendance_Status</name>
+        <label>Check Attendance Status</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Copy_1_of_Update_Participation_Hours_Contributed</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not Attended</defaultConnectorLabel>
+        <rules>
+            <name>Attended</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Attendance_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Attended</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Participation_Hours_Contributed</targetReference>
+            </connector>
+            <label>Attended</label>
+        </rules>
+    </decisions>
+    <description>This flow automatically calculates Hours Contributed for a Drive Participation record when Attendance Status is marked as &quot;Attended&quot;.
+It derives the duration using the related EcoDrive Start Time and End Time fields and updates the Hours_Contributed__c field.
+Roll-up summary fields on Volunteer and EcoDrive automatically update total hours.</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>CalculatedDriveHours</name>
+        <dataType>Number</dataType>
+        <expression>({!Get_EcoDrive.End_Time__c} - {!Get_EcoDrive.Start_Time__c}) /3600000</expression>
+        <scale>2</scale>
+    </formulas>
+    <interviewLabel>EcoConnect – Attendance Based Hours Calculation {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>EcoConnect – Attendance Based Hours Calculation</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_EcoDrive</name>
+        <label>Get EcoDrive</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_Attendance_Status</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.EcoDrive__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>EcoDrive__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Copy_1_of_Update_Participation_Hours_Contributed</name>
+        <label>Copy 1 of Update Participation Hours Contributed</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>Hours_Contributed__c</field>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Participation_Hours_Contributed</name>
+        <label>Update Participation Hours Contributed</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>Hours_Contributed__c</field>
+            <value>
+                <elementReference>CalculatedDriveHours</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_EcoDrive</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Attendance_Status__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>Drive_Participation__c</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

@@ -1,0 +1,21 @@
+:host {
+    display: block;
+    height: 100%;
+}
+
+.drive-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-left: 4px solid transparent;
+}
+
+.drive-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #0070d2; /* Salesforce Blue */
+    cursor: pointer;
+}
+
+.selected-drive {
+    background-color: #f3f3f3;
+    border-left: 4px solid #0070d2;
+}

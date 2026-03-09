@@ -1,0 +1,39 @@
+/* Container for the entire card */
+.eco-carousel-card {
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Slightly more defined shadow */
+    border-radius: 16px; /* Larger radius for a modern feel */
+    width: 100%;          /* Restricts width to full screen */
+    margin: 2rem auto;   /* Centers the component on the page */
+    height: 400px;       /* Fixed height prevents 'stretching' */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;    /* Keeps everything clean inside the card */
+}
+
+/* Header row styling */
+.header-row {
+    padding: 1rem 1.5rem;
+    background: #ffffff;
+}
+
+/* The actual carousel container */
+.carousel-container {
+    background-color: #f4f6f9; /* Subtle off-white for contrast */
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Image scaling for the compact container */
+.carousel-img-custom .slds-carousel__image {
+    height: 250px !important; /* Forces image to fit within the box */
+    object-fit: cover;
+    border-radius: 8px;       /* Rounds image corners */
+    width: 100%;
+}
+
+lightning-combobox {
+    width: 100%;
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Drive_Date_must_be_between_Program_Launc</fullName>
+    <active>true</active>
+    <description>Drive Date must be between Program Launch Date and 6 months from Program Launch Date.</description>
+    <errorConditionFormula>AND(
+    ISCHANGED(Drive_Date__c),
+    OR(
+        Drive_Date__c &lt;  EcoProgram__r.Launch_Date__c,
+        Drive_Date__c &gt; ADDMONTHS( EcoProgram__r.Launch_Date__c , 6)
+    )
+)</errorConditionFormula>
+    <errorDisplayField>Drive_Date__c</errorDisplayField>
+    <errorMessage>Drive Date must be between Program Launch Date and 6 months from Program Launch Date.</errorMessage>
+</ValidationRule>

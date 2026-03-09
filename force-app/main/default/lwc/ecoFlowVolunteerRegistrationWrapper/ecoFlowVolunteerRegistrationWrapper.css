@@ -1,0 +1,47 @@
+/* Host styles ensure the component takes up the right amount of space */
+:host {
+    display: block;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+/* The card container */
+.eco-wrapper {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(45, 90, 39, 0.1);
+    border: 1px solid #e8e2d9;
+}
+
+/* The branding header */
+.eco-header {
+    background-color: #2d5a27; /* Earthy Green */
+    padding: 30px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.eco-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.eco-subtitle {
+    font-size: 1rem;
+    opacity: 0.9;
+    font-style: italic;
+    margin: 0;
+}
+
+/* The container for the Flow */
+.eco-body {
+    background-color: #fdfaf5; /* Nude/Paper tone */
+    padding: 30px;
+}
+
+/* Modernizing the internal flow elements */
+lightning-flow {
+    --sds-c-input-color-border: #d1ccbf;
+}

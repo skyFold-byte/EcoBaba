@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>Calls Apex service to generate a PDF certificate, store it as a Salesforce File, email it to the volunteer, and mark Certificate_Issued__c as true.</description>
+        <name>Generate_Certificate_PDF</name>
+        <label>Generate Certificate PDF</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>EcoConnectCertificateService</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>volunteerId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>EcoConnectCertificateService</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <apiVersion>66.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <description>Automatically generates and emails a PDF certificate when a volunteer reaches 10 total contribution hours, ensuring one-time issuance using a milestone validation check.</description>
+    <environments>Default</environments>
+    <interviewLabel>EcoConnect – Auto Certificate Generation (10 Hours Milestone) {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>EcoConnect – Auto Certificate Generation (10 Hours Milestone)</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Generate_Certificate_PDF</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Total_Hours_Contributed__c</field>
+            <operator>GreaterThanOrEqualTo</operator>
+            <value>
+                <numberValue>10.0</numberValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Certificate_Issued__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Total_Hours_Contributed__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>Volunteer__c</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

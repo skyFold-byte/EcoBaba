@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Drive Detail" icon-name="standard:record">
+        <div class="detail-container">
+            <template if:true={selectedDriveId}>
+                <lightning-record-view-form record-id={selectedDriveId} object-api-name="EcoDrive__c">
+                    <lightning-output-field field-name="Name"></lightning-output-field>
+                    <lightning-output-field field-name="City__c"></lightning-output-field>
+                    <lightning-output-field field-name="State__c"></lightning-output-field>
+                </lightning-record-view-form>
+            </template>
+            
+            <template if:false={selectedDriveId}>
+                <div class="empty-state">
+                    <lightning-icon icon-name="utility:info" size="large"></lightning-icon>
+                    <p class="slds-m-top_small">Select a drive to view its full details.</p>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

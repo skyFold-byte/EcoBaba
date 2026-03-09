@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Upload Drive Image">
+ 
+        <template if:false={disableUpload}>
+            <lightning-file-upload
+                label="Upload Image"
+                name="fileUploader"
+                record-id={recordId}
+                accept=".jpg,.jpeg,.png"
+                onuploadfinished={handleUploadFinished}>
+            </lightning-file-upload>
+        </template>
+ 
+        <template if:true={disableUpload}>
+            <div class="slds-text-color_error slds-p-around_medium">
+                Image already uploaded. Only one image allowed.
+            </div>
+        </template>
+ 
+    </lightning-card>
+</template>

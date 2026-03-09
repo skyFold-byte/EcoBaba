@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Eco Programs" icon-name="standard: Entitlement">
+        <div style="height: 400px;">
+            <lightning-datatable
+                key-field="Id"
+                data={programs.data}
+                columns={columns}
+                hide-checkbox-column
+                onrowaction={handleRowAction}>
+            </lightning-datatable>
+        </div>
+        <template if:true={programs.error}>
+            <p class="slds-text-color_error">Error loading programs.</p>
+        </template>
+    </lightning-card>
+</template>

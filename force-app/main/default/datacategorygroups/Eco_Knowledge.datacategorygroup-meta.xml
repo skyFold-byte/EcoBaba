@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCategoryGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <dataCategory>
+        <dataCategory>
+            <label>Tips</label>
+            <name>Tips</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Community News</label>
+            <name>Community_News</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Policy and Awareness</label>
+            <name>Policy_and_Awareness</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Upcoming Initiatives</label>
+            <name>Upcoming_Initiatives</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Eco-Tips</label>
+            <name>Eco_Tips</name>
+        </dataCategory>
+        <label>All</label>
+        <name>All</name>
+    </dataCategory>
+    <description>Tips, Community News, Environmental Issue</description>
+    <label>Eco_Knowledge</label>
+    <objectUsage>
+        <object>KnowledgeArticleVersion</object>
+    </objectUsage>
+</DataCategoryGroup>

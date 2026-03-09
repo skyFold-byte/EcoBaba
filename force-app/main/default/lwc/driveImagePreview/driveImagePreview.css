@@ -1,0 +1,21 @@
+.image-wrapper {
+    width: 100%;
+}
+ 
+.drive-image {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+ 
+.placeholder {
+    height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f3f3f3;
+    color: #777;
+    font-size: 16px;
+    border-radius: 8px;
+}

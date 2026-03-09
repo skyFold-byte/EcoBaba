@@ -1,14 +1,40 @@
 .eco-footer {
-    background: linear-gradient(135deg, #1B5E20, #2E7D32);
-    color: white;
+    background-color: #ffffff;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 4rem;
+    color: #4a4a4a;
 }
- 
+
+.eco-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #00473e; /* Matches your brand green */
+}
+
+.eco-section-title {
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    color: #00473e;
+}
+
 .eco-footer a {
-    color: #E8F5E9;
+    color: #00473e;
+    font-weight: 500;
+    transition: color 0.3s ease;
     text-decoration: none;
 }
- 
+
 .eco-footer a:hover {
+    color: #2e7d32;
     text-decoration: underline;
-    color: #A5D6A7;
+}
+
+.eco-bottom-bar {
+    background-color: #f4f6f5;
+    padding: 1rem;
+    font-size: 0.85rem;
+    color: #707070;
+    border-radius: 8px;
 }

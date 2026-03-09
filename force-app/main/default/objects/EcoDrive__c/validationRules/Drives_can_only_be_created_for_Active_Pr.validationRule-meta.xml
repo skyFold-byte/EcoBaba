@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Drives_can_only_be_created_for_Active_Pr</fullName>
+    <active>true</active>
+    <description>Drives can only be created for Active Programs.</description>
+    <errorConditionFormula>NOT(
+    ISPICKVAL( EcoProgram__r.Status__c , &quot;Active&quot;)
+)</errorConditionFormula>
+    <errorMessage>Drives can only be created for Active Programs.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,33 @@
+<template>
+    <header class="navbar-wrapper">
+        <nav class="nav-container">
+            <div class="nav-left">
+                <a href="/s/" class="home-link">
+                    <lightning-icon icon-name="utility:home" size="small" class="home-icon"></lightning-icon>
+                </a>
+                
+                <ul class="nav-links">
+                    <li><a href="/s/drive-cards">Drives</a></li>
+                    <template if:true={isLoggedIn}>
+                        <li><a href="/s/drive-participation/Drive_Participation__c/Default">My Participation</a></li>
+                    </template>
+                    <li><a href="/s/leaderboard">Top Volunteers</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav-right">
+                <template if:true={isLoggedIn}>
+                    <a href="/s/my-impact" class="nav-link">My Impact</a>
+                    <a href="/s/my-profile" class="nav-link">My Profile</a>
+                    <a href="/s/raise-a-issue" class="btn-secondary">Raise Issue</a>
+                    <a href="/s/volunteer-registration" class="btn-primary">Become a Volunteer</a>
+                </template>
+
+                <template if:false={isLoggedIn}>
+                    <!-- <button class="btn-primary" onclick={handleJoin}>Join EcoBaba</button> -->
+                    <a href="/s/signup-login" class="btn-primary">Join EcoBaba</a>
+                </template>
+            </div>
+        </nav>
+    </header>
+</template>

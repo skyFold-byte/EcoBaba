@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Completed_Program_Cannot_be_edited</fullName>
+    <active>true</active>
+    <description>User cannot edit a completed program unless he/she is a system admin.</description>
+    <errorConditionFormula>AND(
+    ISPICKVAL(PRIORVALUE( Status__c ), 
+     &quot;Completed&quot;),
+    NOT( $Profile.Name = &quot;System Administrator&quot;)
+)</errorConditionFormula>
+    <errorMessage>Completed Program cannot be modified.</errorMessage>
+</ValidationRule>

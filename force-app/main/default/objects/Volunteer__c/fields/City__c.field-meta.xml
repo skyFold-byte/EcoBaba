@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>City__c</fullName>
+    <label>City</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>State__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>City</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>Tamil Nadu</controllingFieldValue>
+            <valueName>Chennai</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tamil Nadu</controllingFieldValue>
+            <valueName>Coimbatore</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tamil Nadu</controllingFieldValue>
+            <valueName>Madurai</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tamil Nadu</controllingFieldValue>
+            <valueName>Tiruchirappalli</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tamil Nadu</controllingFieldValue>
+            <valueName>Salem</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Maharashtra</controllingFieldValue>
+            <valueName>Mumbai</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Maharashtra</controllingFieldValue>
+            <valueName>Pune</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Maharashtra</controllingFieldValue>
+            <valueName>Nagpur</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Maharashtra</controllingFieldValue>
+            <valueName>Nashik</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Maharashtra</controllingFieldValue>
+            <valueName>Aurangabad</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Karnataka</controllingFieldValue>
+            <valueName>Bengaluru</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Karnataka</controllingFieldValue>
+            <valueName>Mysuru</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Karnataka</controllingFieldValue>
+            <valueName>Mangaluru</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Karnataka</controllingFieldValue>
+            <valueName>Hubballi</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Karnataka</controllingFieldValue>
+            <valueName>Belagavi</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Uttar Pradesh</controllingFieldValue>
+            <valueName>Lucknow</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Uttar Pradesh</controllingFieldValue>
+            <valueName>Kanpur</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Uttar Pradesh</controllingFieldValue>
+            <valueName>Varanasi</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Uttar Pradesh</controllingFieldValue>
+            <valueName>Agra</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Uttar Pradesh</controllingFieldValue>
+            <valueName>Prayagraj</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>West Bengal</controllingFieldValue>
+            <valueName>Kolkata</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>West Bengal</controllingFieldValue>
+            <valueName>Siliguri</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>West Bengal</controllingFieldValue>
+            <valueName>Asansol</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>West Bengal</controllingFieldValue>
+            <valueName>Durgapur</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>West Bengal</controllingFieldValue>
+            <valueName>Howrah</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

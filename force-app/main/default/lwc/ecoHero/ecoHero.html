@@ -1,49 +1,16 @@
 <template>
-    <section class="hero">
- 
-        <div class="hero-container">
- 
-            <!-- LEFT SIDE -->
-            <div class="left fade-in">
-                <h1>Empower Change with EcoConnect 🌱</h1>
-                <p>
-                    Join environmental drives, volunteer for a cleaner future,
-                    and track your real-world impact — all in one platform.
-                </p>
- 
-                <lightning-button
-                    label="Explore Drives"
-                    variant="brand"
-                    onclick={navigateToDrives}>
-                </lightning-button>
-            </div>
- 
-            <!-- RIGHT SIDE COUNTER CARD -->
-            <div class="right fade-in delay">
-                <div class="glass-card">
- 
-                    <div class="stat">
-                        <h3>{trees}</h3>
-                        <span>🌳 Trees Planted</span>
-                    </div>
- 
-                    <div class="stat">
-                        <h3>{volunteers}</h3>
-                        <span>👥 Volunteers</span>
-                    </div>
- 
-                    <div class="stat">
-                        <h3>{drives}</h3>
-                        <span>♻️ Drives Completed</span>
-                    </div>
- 
-                </div>
-            </div>
- 
+    <section class="hero-container">
+        <div class="hero-content">
+            <div class="welcome-pill"><span>✨ Welcome back, {name}!</span></div>
+            <h1 class="hero-title">Empower Change with EcoBaba</h1>
+            <p class="hero-description">Join environmental drives, volunteer for a cleaner future, and track your real-world impact—all in one place.</p>
+            <lightning-button label="Explore Drives" variant="brand" onclick={navigateToDrives} class="cta-btn"></lightning-button>
         </div>
- 
-        <div class="circle one"></div>
-        <div class="circle two"></div>
- 
+        <div class="hero-splash">
+            <div class="stats-grid">
+                <div class="stat-card"><h3>{volunteers}</h3><p>Volunteers</p></div>
+                <div class="stat-card "><h3>{drives}</h3><p>Drives Done</p></div>
+            </div>
+        </div>
     </section>
 </template>

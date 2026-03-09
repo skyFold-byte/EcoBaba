@@ -1,0 +1,15 @@
+<template>
+    <div class="eco-wrapper">
+        <div class="eco-header">
+            <h2 class="eco-title">{headerTitle}</h2>
+            <p class="eco-subtitle">Every report you submit helps us restore nature and build cleaner cities.</p>
+        </div>
+        
+        <div class="eco-body">
+            <lightning-flow 
+                flow-api-name="EcoConnect_Log_a_Issue" 
+                onstatuschange={handleStatusChange}>
+            </lightning-flow>
+        </div>
+    </div>
+</template>

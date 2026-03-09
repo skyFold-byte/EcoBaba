@@ -1,0 +1,78 @@
+<template>
+ 
+<template if:true={profile}>
+ 
+<div class="profile-container">
+ 
+<!-- PROFILE HEADER -->
+ 
+<div class="profile-header">
+ 
+<div class="standard: avatar">
+👤
+</div>
+ 
+<div class="profile-details">
+ 
+<h2>{profile.name}</h2>
+ 
+<p class="email">📧 {profile.email}</p>
+ 
+<p class="location">
+📍 {profile.city}, {profile.state}
+</p>
+
+<p class="call">📞 {profile.phone}</p>
+ 
+</div>
+ 
+<div class="badge">
+🏅 {profile.badge}
+</div>
+ 
+</div>
+ 
+<!-- STATS SECTION -->
+ 
+<div class="stats-grid">
+ 
+<div class="stat-card">
+ 
+<div class="stat-icon">🌱</div>
+ 
+<div class="stat-info">
+<h3>{profile.drives}</h3>
+<p>Drives Attended</p>
+</div>
+ 
+</div>
+ 
+<div class="stat-card">
+ 
+<div class="stat-icon">⏱</div>
+ 
+<div class="stat-info">
+<h3>{profile.hours}</h3>
+<p>Hours Contributed</p>
+</div>
+ 
+</div>
+ 
+<div class="stat-card">
+ 
+<div class="stat-icon">⭐</div>
+ 
+<div class="stat-info">
+<h3>{profile.points}</h3>
+<p>Total Points</p>
+</div>
+ 
+</div>
+ 
+</div>
+ 
+</div>
+ 
+</template>
+ 
+</template>

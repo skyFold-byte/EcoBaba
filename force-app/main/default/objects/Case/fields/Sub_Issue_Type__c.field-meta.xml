@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Issue_Type__c</fullName>
+    <label>Sub Issue Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Issue_Category__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Illegal Dumping</fullName>
+                <default>false</default>
+                <label>Illegal Dumping</label>
+            </value>
+            <value>
+                <fullName>Garbage Overflow</fullName>
+                <default>false</default>
+                <label>Garbage Overflow</label>
+            </value>
+            <value>
+                <fullName>Plastic Waste Accumulation</fullName>
+                <default>false</default>
+                <label>Plastic Waste Accumulation</label>
+            </value>
+            <value>
+                <fullName>Construction Debris</fullName>
+                <default>false</default>
+                <label>Construction Debris</label>
+            </value>
+            <value>
+                <fullName>Drainage Blockage</fullName>
+                <default>false</default>
+                <label>Drainage Blockage</label>
+            </value>
+            <value>
+                <fullName>Air Pollution</fullName>
+                <default>false</default>
+                <label>Air Pollution</label>
+            </value>
+            <value>
+                <fullName>Water Pollution</fullName>
+                <default>false</default>
+                <label>Water Pollution</label>
+            </value>
+            <value>
+                <fullName>Noise Pollution</fullName>
+                <default>false</default>
+                <label>Noise Pollution</label>
+            </value>
+            <value>
+                <fullName>Open Burning</fullName>
+                <default>false</default>
+                <label>Open Burning</label>
+            </value>
+            <value>
+                <fullName>Tree Cutting</fullName>
+                <default>false</default>
+                <label>Tree Cutting</label>
+            </value>
+            <value>
+                <fullName>Deforestation</fullName>
+                <default>false</default>
+                <label>Deforestation</label>
+            </value>
+            <value>
+                <fullName>Park Damage</fullName>
+                <default>false</default>
+                <label>Park Damage</label>
+            </value>
+            <value>
+                <fullName>River Encroachment</fullName>
+                <default>false</default>
+                <label>River Encroachment</label>
+            </value>
+            <value>
+                <fullName>Public Hazard</fullName>
+                <default>false</default>
+                <label>Public Hazard</label>
+            </value>
+            <value>
+                <fullName>Open Manhole</fullName>
+                <default>false</default>
+                <label>Open Manhole</label>
+            </value>
+            <value>
+                <fullName>Chemical Spill</fullName>
+                <default>false</default>
+                <label>Chemical Spill</label>
+            </value>
+            <value>
+                <fullName>Sewage Leakage</fullName>
+                <default>false</default>
+                <label>Sewage Leakage</label>
+            </value>
+            <value>
+                <fullName>Streetlight Not Working</fullName>
+                <default>false</default>
+                <label>Streetlight Not Working</label>
+            </value>
+            <value>
+                <fullName>Road Blockage</fullName>
+                <default>false</default>
+                <label>Road Blockage</label>
+            </value>
+            <value>
+                <fullName>Broken Public Property</fullName>
+                <default>false</default>
+                <label>Broken Public Property</label>
+            </value>
+            <value>
+                <fullName>Stray Animal Issue</fullName>
+                <default>false</default>
+                <label>Stray Animal Issue</label>
+            </value>
+            <value>
+                <fullName>Wildlife Disturbance</fullName>
+                <default>false</default>
+                <label>Wildlife Disturbance</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Waste</controllingFieldValue>
+            <valueName>Illegal Dumping</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Waste</controllingFieldValue>
+            <valueName>Garbage Overflow</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Waste</controllingFieldValue>
+            <valueName>Plastic Waste Accumulation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Waste</controllingFieldValue>
+            <valueName>Construction Debris</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Waste</controllingFieldValue>
+            <valueName>Drainage Blockage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pollution</controllingFieldValue>
+            <valueName>Air Pollution</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pollution</controllingFieldValue>
+            <valueName>Water Pollution</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pollution</controllingFieldValue>
+            <valueName>Noise Pollution</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Environmental Damage</controllingFieldValue>
+            <valueName>Open Burning</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Environmental Damage</controllingFieldValue>
+            <valueName>Tree Cutting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Environmental Damage</controllingFieldValue>
+            <valueName>Deforestation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Environmental Damage</controllingFieldValue>
+            <valueName>Wildlife Disturbance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Public Safety</controllingFieldValue>
+            <valueName>Park Damage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Public Safety</controllingFieldValue>
+            <valueName>River Encroachment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Public Safety</controllingFieldValue>
+            <valueName>Public Hazard</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Public Safety</controllingFieldValue>
+            <valueName>Open Manhole</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Public Safety</controllingFieldValue>
+            <valueName>Chemical Spill</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Public Safety</controllingFieldValue>
+            <valueName>Sewage Leakage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Public Safety</controllingFieldValue>
+            <valueName>Stray Animal Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Infrastructure</controllingFieldValue>
+            <valueName>Streetlight Not Working</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Infrastructure</controllingFieldValue>
+            <valueName>Road Blockage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Infrastructure</controllingFieldValue>
+            <valueName>Broken Public Property</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

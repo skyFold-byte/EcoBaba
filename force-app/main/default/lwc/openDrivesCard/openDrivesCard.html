@@ -1,47 +1,22 @@
 <template>
-    <lightning-layout multiple-rows="true" horizontal-align="spread">
- 
-        <template for:each={drives} for:item="drive">
- 
-            <lightning-layout-item
-                key={drive.id}
-                size="12"
-                medium-device-size="6"
-                large-device-size="4"
-                padding="around-small">
- 
-                <lightning-card title={drive.name} icon-name="standard:event">
- 
-                    <div class="slds-p-around_medium">
- 
-                        <p>📍 {drive.venue}</p>
-                        <p>📅 {drive.date}</p>
-                        <p>⏰ {drive.time}</p>
- 
-                        <div class="slds-m-top_small">
-                            <p>👥 {drive.joined} Joined</p>
-                            <p class={drive.spotsClass}>
-                                🔥 {drive.spotsLeft} Spots Left
-                            </p>
-                        </div>
- 
-                        <div class="slds-m-top_medium">
-                            <lightning-button
-                                label="Register Now"
-                                variant="brand"
-                                data-id={drive.id}
-                                onclick={handleRegister}
-                                disabled={drive.isFull}>
-                            </lightning-button>
-                        </div>
- 
+    <div class="slds-grid slds-wrap slds-gutters slds-p-around_small">
+        <template for:each={drives} for:item="d">
+            <div key={d.id} class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3 slds-m-bottom_medium">
+                <div class="card">
+                    <div class="header slds-truncate">{d.name}</div>
+                    <img src={d.imageUrl} class="img" alt={d.name}>
+                    <div class="body">
+                        <p>📍 {d.venue}</p>
+                        <p>📅 {d.driveDate} | {d.driveTime}</p>
+                        <p class="spots">🔥 {d.spotsLeft} Spots Left</p>
+                        
+                        <button class="btn" onclick={handleRegister} data-id={d.id} disabled={d.isFull}>
+                            <template lwc:if={d.isFull}>Full</template>
+                            <template lwc:else>Register</template>
+                        </button>
                     </div>
- 
-                </lightning-card>
- 
-            </lightning-layout-item>
- 
+                </div>
+            </div>
         </template>
- 
-    </lightning-layout>
+    </div>
 </template>

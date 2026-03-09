@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Launch_Date_must_be_between_today_and_6</fullName>
+    <active>true</active>
+    <description>Launch Date must be between today and 6 months from today.</description>
+    <errorConditionFormula>AND(
+    ISCHANGED(Launch_Date__c),
+    OR(
+        Launch_Date__c &lt; TODAY(),
+        Launch_Date__c &gt; ADDMONTHS(TODAY(), 6)
+    )
+)</errorConditionFormula>
+    <errorDisplayField>Launch_Date__c</errorDisplayField>
+    <errorMessage>Launch Date must be between today and 6 months from today.</errorMessage>
+</ValidationRule>

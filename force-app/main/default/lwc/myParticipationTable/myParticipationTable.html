@@ -1,0 +1,21 @@
+<template>
+    <div class="brand-container">
+        <lightning-card title="My Participations" icon-name="custom:custom96">
+            <div slot="actions">
+                <span class="slds-badge badge-brand">{participationCount} Records</span>
+            </div>
+
+            <div class="slds-p-horizontal_medium slds-p-bottom_medium">
+                <div class="datatable-wrapper">
+                    <lightning-datatable
+                        key-field="Id"
+                        data={participations}
+                        columns={columns}
+                        hide-checkbox-column
+                        column-widths-mode="auto">
+                    </lightning-datatable>
+                </div>
+            </div>
+        </lightning-card>
+    </div>
+</template>
